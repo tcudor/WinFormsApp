@@ -31,12 +31,13 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.do_button = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(221, 12);
+            this.pictureBox.Location = new System.Drawing.Point(216, 88);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(324, 216);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -45,7 +46,7 @@
             // 
             // do_button
             // 
-            this.do_button.Location = new System.Drawing.Point(330, 246);
+            this.do_button.Location = new System.Drawing.Point(338, 321);
             this.do_button.Name = "do_button";
             this.do_button.Size = new System.Drawing.Size(94, 29);
             this.do_button.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(120, 329);
+            this.textBox.Location = new System.Drawing.Point(127, 370);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.ReadOnly = true;
@@ -63,11 +64,22 @@
             this.textBox.Size = new System.Drawing.Size(525, 190);
             this.textBox.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(183, 29);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Alegeti o imagine:";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 585);
+            this.ClientSize = new System.Drawing.Size(801, 630);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.do_button);
             this.Controls.Add(this.pictureBox);
@@ -84,5 +96,6 @@
         private PictureBox pictureBox;
         private Button do_button;
         private TextBox textBox;
+        private Button button1;
     }
 }
