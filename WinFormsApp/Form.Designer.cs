@@ -33,12 +33,14 @@
             this.button_alege = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label_rez = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button_exit = new System.Windows.Forms.Button();
             this.button_new = new System.Windows.Forms.Button();
+            this.label_rez = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +61,7 @@
             this.textBox.Name = "textBox";
             this.textBox.ReadOnly = true;
             this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox.Size = new System.Drawing.Size(596, 239);
+            this.textBox.Size = new System.Drawing.Size(638, 234);
             this.textBox.TabIndex = 2;
             // 
             // button_alege
@@ -91,6 +93,38 @@
             this.panel1.Size = new System.Drawing.Size(925, 84);
             this.panel1.TabIndex = 5;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel3.Controls.Add(this.button_exit);
+            this.panel3.Controls.Add(this.button_new);
+            this.panel3.Location = new System.Drawing.Point(1, 79);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(106, 745);
+            this.panel3.TabIndex = 10;
+            // 
+            // button_exit
+            // 
+            this.button_exit.BackColor = System.Drawing.Color.Transparent;
+            this.button_exit.Location = new System.Drawing.Point(-2, 396);
+            this.button_exit.Name = "button_exit";
+            this.button_exit.Size = new System.Drawing.Size(108, 50);
+            this.button_exit.TabIndex = 8;
+            this.button_exit.Text = "Iesire";
+            this.button_exit.UseVisualStyleBackColor = false;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
+            // 
+            // button_new
+            // 
+            this.button_new.BackColor = System.Drawing.Color.Transparent;
+            this.button_new.Location = new System.Drawing.Point(0, 170);
+            this.button_new.Name = "button_new";
+            this.button_new.Size = new System.Drawing.Size(106, 49);
+            this.button_new.TabIndex = 9;
+            this.button_new.Text = "Alege o alta imagine";
+            this.button_new.UseVisualStyleBackColor = false;
+            this.button_new.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label_rez
             // 
             this.label_rez.AutoSize = true;
@@ -105,31 +139,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.LimeGreen;
             this.panel2.Controls.Add(this.label_rez);
-            this.panel2.Location = new System.Drawing.Point(-2, 485);
+            this.panel2.Location = new System.Drawing.Point(106, 485);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(879, 40);
+            this.panel2.Size = new System.Drawing.Size(771, 40);
             this.panel2.TabIndex = 7;
-            // 
-            // button_exit
-            // 
-            this.button_exit.BackColor = System.Drawing.Color.Firebrick;
-            this.button_exit.Location = new System.Drawing.Point(757, 729);
-            this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(94, 55);
-            this.button_exit.TabIndex = 8;
-            this.button_exit.Text = "Iesire";
-            this.button_exit.UseVisualStyleBackColor = false;
-            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
-            // 
-            // button_new
-            // 
-            this.button_new.Location = new System.Drawing.Point(725, 259);
-            this.button_new.Name = "button_new";
-            this.button_new.Size = new System.Drawing.Size(105, 53);
-            this.button_new.TabIndex = 9;
-            this.button_new.Text = "Alege o alta imagine";
-            this.button_new.UseVisualStyleBackColor = true;
-            this.button_new.Click += new System.EventHandler(this.button1_Click);
             // 
             // ImageToText
             // 
@@ -138,10 +151,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(863, 805);
-            this.Controls.Add(this.button_new);
-            this.Controls.Add(this.button_exit);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button_alege);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.pictureBox);
@@ -150,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -168,5 +181,6 @@
         private Panel panel2;
         private Button button_exit;
         private Button button_new;
+        private Panel panel3;
     }
 }

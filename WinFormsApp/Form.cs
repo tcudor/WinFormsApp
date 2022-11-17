@@ -20,7 +20,7 @@ namespace ImageToTextApp
         {
             button_alege.Visible = false;
             OpenFileDialog file = new OpenFileDialog();
-            file.Filter = "Jpegs|*.Jpegs|png|*.png|GIF|*.Gif|jpg|*.jpg|Bitmaps|*.Bitmaps";
+            file.Filter = "All files (*.*)|*.*|Jpegs|*.Jpegs|Png|*.png|Gif|*.Gif|jpg|*.jpg|Bitmaps|*.Bitmaps";
             file.Title = "please select";
             if (file.ShowDialog() == DialogResult.OK)
             {
