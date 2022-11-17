@@ -2,14 +2,14 @@ using Patagames.Ocr;
 
 namespace WinFormsApp
 {
-    public partial class Form1 : Form
+    public partial class ImageToText : Form
     {
         private string photopath;
         private byte[] binaryphoto;
-        public Form1()
+        public ImageToText()
         {
             InitializeComponent();
-           // pictureBox.ImageLocation = @"D:\tudorg\personal\repos\WinFormsApp\WinFormsApp\imgs\test.png";
+          
         }
 
 

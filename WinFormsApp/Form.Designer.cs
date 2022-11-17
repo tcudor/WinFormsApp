@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp
 {
-    partial class Form1
+    partial class ImageToText
     {
         /// <summary>
         ///  Required designer variable.
@@ -74,17 +74,18 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // ImageToText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(801, 630);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.do_button);
             this.Controls.Add(this.pictureBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ImageToText";
+            this.Text = "ImageToText";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
