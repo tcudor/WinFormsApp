@@ -1,4 +1,4 @@
-namespace WinFormsApp
+namespace ImageToTextApp
 {
     internal static class Program
     {
