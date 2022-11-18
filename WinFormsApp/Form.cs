@@ -45,6 +45,7 @@ namespace ImageToTextApp
                 button_exit.Visible = true;
                 button_new.Visible = true;
                 button_save.Visible = true;
+                pictureBox1.Visible = false;
             }
         }
 

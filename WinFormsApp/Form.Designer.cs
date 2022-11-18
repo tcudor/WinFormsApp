@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImageToText));
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.textBox = new System.Windows.Forms.TextBox();
             this.button_alege = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.button_exit = new System.Windows.Forms.Button();
+            this.button_save = new System.Windows.Forms.Button();
             this.button_new = new System.Windows.Forms.Button();
             this.label_rez = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button_save = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox
             // 
             this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox.Location = new System.Drawing.Point(221, 146);
+            this.pictureBox.Location = new System.Drawing.Point(321, 41);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(437, 297);
+            this.pictureBox.Size = new System.Drawing.Size(464, 327);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(143, 545);
+            this.textBox.Location = new System.Drawing.Point(250, 495);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.ReadOnly = true;
             this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox.Size = new System.Drawing.Size(638, 234);
+            this.textBox.Size = new System.Drawing.Size(601, 284);
             this.textBox.TabIndex = 2;
             // 
             // button_alege
             // 
-            this.button_alege.Location = new System.Drawing.Point(356, 249);
+            this.button_alege.Location = new System.Drawing.Point(466, 240);
             this.button_alege.Name = "button_alege";
             this.button_alege.Size = new System.Drawing.Size(162, 72);
             this.button_alege.TabIndex = 3;
@@ -77,51 +78,52 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tempus Sans ITC", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(154, 22);
+            this.label1.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(14, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(568, 39);
+            this.label1.Size = new System.Drawing.Size(219, 347);
             this.label1.TabIndex = 4;
             this.label1.Text = "Aplicatie ce preia textul dintr-o imagine";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.Controls.Add(this.button_exit);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button_save);
+            this.panel1.Controls.Add(this.button_new);
             this.panel1.Location = new System.Drawing.Point(-2, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(925, 84);
+            this.panel1.Size = new System.Drawing.Size(236, 811);
             this.panel1.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel3.Controls.Add(this.button_save);
-            this.panel3.Controls.Add(this.button_exit);
-            this.panel3.Controls.Add(this.button_new);
-            this.panel3.Location = new System.Drawing.Point(1, 79);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(106, 745);
-            this.panel3.TabIndex = 10;
             // 
             // button_exit
             // 
             this.button_exit.BackColor = System.Drawing.Color.Transparent;
-            this.button_exit.Location = new System.Drawing.Point(0, 301);
+            this.button_exit.Location = new System.Drawing.Point(56, 465);
             this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(108, 50);
+            this.button_exit.Size = new System.Drawing.Size(103, 50);
             this.button_exit.TabIndex = 8;
             this.button_exit.Text = "Iesire";
             this.button_exit.UseVisualStyleBackColor = false;
             this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
             // 
+            // button_save
+            // 
+            this.button_save.Location = new System.Drawing.Point(56, 419);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(103, 50);
+            this.button_save.TabIndex = 10;
+            this.button_save.Text = "Salvare text";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
             // button_new
             // 
             this.button_new.BackColor = System.Drawing.Color.Transparent;
-            this.button_new.Location = new System.Drawing.Point(0, 102);
+            this.button_new.Location = new System.Drawing.Point(56, 373);
             this.button_new.Name = "button_new";
-            this.button_new.Size = new System.Drawing.Size(106, 49);
+            this.button_new.Size = new System.Drawing.Size(103, 49);
             this.button_new.TabIndex = 9;
             this.button_new.Text = "Alege o alta imagine";
             this.button_new.UseVisualStyleBackColor = false;
@@ -139,44 +141,43 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel2.BackColor = System.Drawing.Color.MediumOrchid;
             this.panel2.Controls.Add(this.label_rez);
-            this.panel2.Location = new System.Drawing.Point(106, 485);
+            this.panel2.Location = new System.Drawing.Point(234, 417);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(771, 40);
+            this.panel2.Size = new System.Drawing.Size(651, 40);
             this.panel2.TabIndex = 7;
             // 
-            // button_save
+            // pictureBox1
             // 
-            this.button_save.Location = new System.Drawing.Point(0, 201);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(106, 50);
-            this.button_save.TabIndex = 10;
-            this.button_save.Text = "Salvare text";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(248, 126);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(212, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // ImageToText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(863, 805);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button_alege);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.panel1);
             this.Name = "ImageToText";
             this.Text = "ImageToText";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,7 +194,7 @@
         private Panel panel2;
         private Button button_exit;
         private Button button_new;
-        private Panel panel3;
         private Button button_save;
+        private PictureBox pictureBox1;
     }
 }
