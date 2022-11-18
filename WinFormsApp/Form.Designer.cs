@@ -38,6 +38,7 @@
             this.button_new = new System.Windows.Forms.Button();
             this.label_rez = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -96,6 +97,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel3.Controls.Add(this.button_save);
             this.panel3.Controls.Add(this.button_exit);
             this.panel3.Controls.Add(this.button_new);
             this.panel3.Location = new System.Drawing.Point(1, 79);
@@ -106,7 +108,7 @@
             // button_exit
             // 
             this.button_exit.BackColor = System.Drawing.Color.Transparent;
-            this.button_exit.Location = new System.Drawing.Point(-2, 396);
+            this.button_exit.Location = new System.Drawing.Point(0, 301);
             this.button_exit.Name = "button_exit";
             this.button_exit.Size = new System.Drawing.Size(108, 50);
             this.button_exit.TabIndex = 8;
@@ -117,7 +119,7 @@
             // button_new
             // 
             this.button_new.BackColor = System.Drawing.Color.Transparent;
-            this.button_new.Location = new System.Drawing.Point(0, 170);
+            this.button_new.Location = new System.Drawing.Point(0, 102);
             this.button_new.Name = "button_new";
             this.button_new.Size = new System.Drawing.Size(106, 49);
             this.button_new.TabIndex = 9;
@@ -143,6 +145,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(771, 40);
             this.panel2.TabIndex = 7;
+            // 
+            // button_save
+            // 
+            this.button_save.Location = new System.Drawing.Point(0, 201);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(106, 50);
+            this.button_save.TabIndex = 10;
+            this.button_save.Text = "Salvare text";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // ImageToText
             // 
@@ -182,5 +194,6 @@
         private Button button_exit;
         private Button button_new;
         private Panel panel3;
+        private Button button_save;
     }
 }

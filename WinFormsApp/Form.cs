@@ -6,14 +6,15 @@ namespace ImageToTextApp
     {
         private string photopath;
         private byte[] binaryphoto;
+        string plainText;
         public ImageToText()
         {
             InitializeComponent();
             textBox.Visible = false;
-            //  label_rez.Visible = false;
             panel2.Visible = false;
             button_exit.Visible = false;
             button_new.Visible = false;
+            button_save.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,20 +37,29 @@ namespace ImageToTextApp
             {
                 objOcr.Init(Patagames.Ocr.Enums.Languages.English);
 
-                string plainText = objOcr.GetTextFromImage((Bitmap)pictureBox.Image);
+                plainText = objOcr.GetTextFromImage((Bitmap)pictureBox.Image);
 
                 textBox.Text = plainText;
                 panel2.Visible = true;
-                // label_rez.Visible = true;
                 textBox.Visible = true;
                 button_exit.Visible = true;
                 button_new.Visible = true;
+                button_save.Visible = true;
             }
         }
 
         private void button_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            string name = pictureBox.Name;
+            StreamWriter S;
+            S = File.CreateText(photopath + ".txt");
+            S.WriteLine(plainText);
+            S.Close();
         }
     }
 }
