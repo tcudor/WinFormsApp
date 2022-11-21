@@ -31,50 +31,38 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImageToText));
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.textBox = new System.Windows.Forms.TextBox();
-            this.button_alege = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_exit = new System.Windows.Forms.Button();
-            this.button_save = new System.Windows.Forms.Button();
-            this.button_new = new System.Windows.Forms.Button();
-            this.label_rez = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menu_Button_save = new ImageToTextApp.Design.Menu_Button();
+            this.menu_Button_exit = new ImageToTextApp.Design.Menu_Button();
+            this.menu_Button_new = new ImageToTextApp.Design.Menu_Button();
+            this.menu_Button_alege = new ImageToTextApp.Design.Menu_Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox
             // 
             this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox.Location = new System.Drawing.Point(321, 41);
+            this.pictureBox.Location = new System.Drawing.Point(205, 21);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(464, 327);
+            this.pictureBox.Size = new System.Drawing.Size(646, 322);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(250, 495);
+            this.textBox.Location = new System.Drawing.Point(215, 518);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.ReadOnly = true;
             this.textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox.Size = new System.Drawing.Size(601, 284);
+            this.textBox.Size = new System.Drawing.Size(626, 275);
             this.textBox.TabIndex = 2;
-            // 
-            // button_alege
-            // 
-            this.button_alege.Location = new System.Drawing.Point(466, 240);
-            this.button_alege.Name = "button_alege";
-            this.button_alege.Size = new System.Drawing.Size(162, 72);
-            this.button_alege.TabIndex = 3;
-            this.button_alege.Text = "Apasati aici pentru a alege o imagine ";
-            this.button_alege.UseVisualStyleBackColor = true;
-            this.button_alege.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -87,76 +75,90 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Chocolate;
-            this.panel1.Controls.Add(this.button_exit);
+            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.menu_Button_save);
+            this.panel1.Controls.Add(this.menu_Button_exit);
+            this.panel1.Controls.Add(this.menu_Button_new);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button_save);
-            this.panel1.Controls.Add(this.button_new);
             this.panel1.Location = new System.Drawing.Point(-2, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 811);
+            this.panel1.Size = new System.Drawing.Size(196, 811);
             this.panel1.TabIndex = 5;
             // 
-            // button_exit
+            // menu_Button_save
             // 
-            this.button_exit.BackColor = System.Drawing.Color.Transparent;
-            this.button_exit.Location = new System.Drawing.Point(56, 465);
-            this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(103, 50);
-            this.button_exit.TabIndex = 8;
-            this.button_exit.Text = "Iesire";
-            this.button_exit.UseVisualStyleBackColor = false;
-            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
+            this.menu_Button_save.BackColor = System.Drawing.Color.DarkGray;
+            this.menu_Button_save.FlatAppearance.BorderSize = 0;
+            this.menu_Button_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_Button_save.ForeColor = System.Drawing.Color.Black;
+            this.menu_Button_save.Location = new System.Drawing.Point(3, 467);
+            this.menu_Button_save.Name = "menu_Button_save";
+            this.menu_Button_save.Size = new System.Drawing.Size(188, 50);
+            this.menu_Button_save.TabIndex = 12;
+            this.menu_Button_save.Text = "Salvare text in fisier";
+            this.menu_Button_save.UseVisualStyleBackColor = false;
+            this.menu_Button_save.Click += new System.EventHandler(this.menu_Button_save_Click);
             // 
-            // button_save
+            // menu_Button_exit
             // 
-            this.button_save.Location = new System.Drawing.Point(56, 419);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(103, 50);
-            this.button_save.TabIndex = 10;
-            this.button_save.Text = "Salvare text";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            this.menu_Button_exit.BackColor = System.Drawing.Color.DarkGray;
+            this.menu_Button_exit.FlatAppearance.BorderSize = 0;
+            this.menu_Button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_Button_exit.ForeColor = System.Drawing.Color.Black;
+            this.menu_Button_exit.Location = new System.Drawing.Point(3, 523);
+            this.menu_Button_exit.Name = "menu_Button_exit";
+            this.menu_Button_exit.Size = new System.Drawing.Size(188, 50);
+            this.menu_Button_exit.TabIndex = 13;
+            this.menu_Button_exit.Text = "Iesire";
+            this.menu_Button_exit.UseVisualStyleBackColor = false;
+            this.menu_Button_exit.Click += new System.EventHandler(this.menu_Button_exit_Click);
             // 
-            // button_new
+            // menu_Button_new
             // 
-            this.button_new.BackColor = System.Drawing.Color.Transparent;
-            this.button_new.Location = new System.Drawing.Point(56, 373);
-            this.button_new.Name = "button_new";
-            this.button_new.Size = new System.Drawing.Size(103, 49);
-            this.button_new.TabIndex = 9;
-            this.button_new.Text = "Alege o alta imagine";
-            this.button_new.UseVisualStyleBackColor = false;
-            this.button_new.Click += new System.EventHandler(this.button1_Click);
+            this.menu_Button_new.BackColor = System.Drawing.Color.DarkGray;
+            this.menu_Button_new.FlatAppearance.BorderSize = 0;
+            this.menu_Button_new.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_Button_new.ForeColor = System.Drawing.Color.Black;
+            this.menu_Button_new.Location = new System.Drawing.Point(3, 411);
+            this.menu_Button_new.Name = "menu_Button_new";
+            this.menu_Button_new.Size = new System.Drawing.Size(188, 50);
+            this.menu_Button_new.TabIndex = 11;
+            this.menu_Button_new.Text = "Alege o alta imagine";
+            this.menu_Button_new.UseVisualStyleBackColor = false;
+            this.menu_Button_new.Click += new System.EventHandler(this.menu_Button_alege_Click);
             // 
-            // label_rez
+            // menu_Button_alege
             // 
-            this.label_rez.AutoSize = true;
-            this.label_rez.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_rez.Location = new System.Drawing.Point(72, 10);
-            this.label_rez.Name = "label_rez";
-            this.label_rez.Size = new System.Drawing.Size(90, 18);
-            this.label_rez.TabIndex = 6;
-            this.label_rez.Text = "Rezultat";
+            this.menu_Button_alege.BackColor = System.Drawing.Color.DarkGray;
+            this.menu_Button_alege.FlatAppearance.BorderSize = 0;
+            this.menu_Button_alege.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_Button_alege.ForeColor = System.Drawing.Color.Black;
+            this.menu_Button_alege.Location = new System.Drawing.Point(406, 393);
+            this.menu_Button_alege.Name = "menu_Button_alege";
+            this.menu_Button_alege.Size = new System.Drawing.Size(244, 66);
+            this.menu_Button_alege.TabIndex = 6;
+            this.menu_Button_alege.Text = "Apasati aici pentru a selecta o imagine";
+            this.menu_Button_alege.UseVisualStyleBackColor = false;
+            this.menu_Button_alege.Click += new System.EventHandler(this.menu_Button_alege_Click);
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.BackColor = System.Drawing.Color.MediumOrchid;
-            this.panel2.Controls.Add(this.label_rez);
-            this.panel2.Location = new System.Drawing.Point(234, 417);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(651, 40);
-            this.panel2.TabIndex = 7;
+            this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(187, 480);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(679, 35);
+            this.panel3.TabIndex = 7;
             // 
-            // pictureBox1
+            // label2
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(248, 126);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(212, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(28, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Rezultat";
             // 
             // ImageToText
             // 
@@ -164,20 +166,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(863, 805);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button_alege);
+            this.Controls.Add(this.menu_Button_alege);
             this.Controls.Add(this.textBox);
-            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.panel3);
             this.Name = "ImageToText";
             this.Text = "ImageToText";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,14 +189,15 @@
 
         private PictureBox pictureBox;
         private TextBox textBox;
-        private Button button_alege;
         private Label label1;
         private Panel panel1;
         private Label label_rez;
         private Panel panel2;
-        private Button button_exit;
-        private Button button_new;
-        private Button button_save;
-        private PictureBox pictureBox1;
+        private Design.Menu_Button menu_Button_new;
+        private Design.Menu_Button menu_Button_save;
+        private Design.Menu_Button menu_Button_exit;
+        private Design.Menu_Button menu_Button_alege;
+        private Panel panel3;
+        private Label label2;
     }
 }

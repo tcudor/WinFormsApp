@@ -1,4 +1,5 @@
 using Patagames.Ocr;
+using System.Text.RegularExpressions;
 
 namespace ImageToTextApp
 {
@@ -11,15 +12,18 @@ namespace ImageToTextApp
         {
             InitializeComponent();
             textBox.Visible = false;
-            panel2.Visible = false;
-            button_exit.Visible = false;
-            button_new.Visible = false;
-            button_save.Visible = false;
+            label2.Visible = false;
+            panel3.Visible = false;
+            menu_Button_exit.Visible = false;
+            menu_Button_new.Visible = false;
+            menu_Button_save.Visible = false;
+            pictureBox.Visible = false;
+            menu_Button_alege.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void menu_Button_alege_Click(object sender, EventArgs e)
         {
-            button_alege.Visible = false;
+            menu_Button_alege.Visible = false;
             OpenFileDialog file = new OpenFileDialog();
             file.Filter = "All files (*.*)|*.*|Jpegs|*.Jpegs|Png|*.png|Gif|*.Gif|jpg|*.jpg|Bitmaps|*.Bitmaps";
             file.Title = "please select";
@@ -35,26 +39,36 @@ namespace ImageToTextApp
             }
             using (var objOcr = OcrApi.Create())
             {
-                objOcr.Init(Patagames.Ocr.Enums.Languages.English);
-
+                int ok = 0;
+                objOcr.Init(Patagames.Ocr.Enums.Languages.English);                
                 plainText = objOcr.GetTextFromImage((Bitmap)pictureBox.Image);
-
-                textBox.Text = plainText;
-                panel2.Visible = true;
+                foreach (char simbol in plainText)
+                {
+                    if (Char.IsLetter(simbol))
+                    {
+                        textBox.Text = textBox.Text + simbol;
+                        ok = 1;
+                    }
+                }
+                if (ok == 0)
+                    textBox.Text = "Nu s-a gasit nici o litera";
+                panel3.Visible = true;
+                label2.Visible= true;
                 textBox.Visible = true;
-                button_exit.Visible = true;
-                button_new.Visible = true;
-                button_save.Visible = true;
-                pictureBox1.Visible = false;
+                menu_Button_exit.Visible = true;
+                menu_Button_new.Visible = true;
+                menu_Button_save.Visible = true;
+                pictureBox.Visible = true;
+                
             }
         }
 
-        private void button_exit_Click(object sender, EventArgs e)
+        private void menu_Button_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button_save_Click(object sender, EventArgs e)
+        private void menu_Button_save_Click(object sender, EventArgs e)
         {
             string name = pictureBox.Name;
             StreamWriter S;
