@@ -67,15 +67,16 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(14, 23);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(14, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 347);
+            this.label1.Size = new System.Drawing.Size(187, 347);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Aplicatie ce preia textul dintr-o imagine";
+            this.label1.Text = "Aplicatie ce identifica textul dintr-o imagine";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.menu_Button_save);
             this.panel1.Controls.Add(this.menu_Button_exit);
             this.panel1.Controls.Add(this.menu_Button_new);
@@ -143,7 +144,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(187, 480);
             this.panel3.Name = "panel3";
