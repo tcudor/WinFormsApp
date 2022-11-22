@@ -11,12 +11,12 @@ namespace ImageToTextApp.Design
 {
     public class Menu_Button:Button
     {
-        //Fields
+        
         private int borderSize = 0;
         private int borderRadius = 40;
         private Color borderColor = Color.PaleGreen;
 
-        //Constructors
+        //constructor
         public Menu_Button()
         {
             this.FlatStyle= FlatStyle.Flat;
@@ -26,7 +26,7 @@ namespace ImageToTextApp.Design
             this.ForeColor=Color.White;
         }
 
-        //Methods
+        
         private GraphicsPath GetFigurePath(RectangleF rect, float radius)
         {
             GraphicsPath path= new GraphicsPath();
@@ -48,7 +48,7 @@ namespace ImageToTextApp.Design
             RectangleF rectSurface = new RectangleF(0, 0, this.Width, this.Height);
             RectangleF rectBorder = new RectangleF(1, 1, this.Width - 0.8F, this.Height - 1);
 
-            if (borderRadius > 2)//Rounded Button
+            if (borderRadius > 2)//buton cu margini rotunde
             {
                 using (GraphicsPath pathSurface = GetFigurePath(rectSurface, borderRadius))
                 using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius))
@@ -56,16 +56,14 @@ namespace ImageToTextApp.Design
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     penBorder.Alignment = PenAlignment.Inset;
-                    //Button surface
+                    //suprafata butonului
                     this.Region=new Region(pathSurface);
-                    //Draw surface border form HD result
                     pevent.Graphics.DrawPath(penSurface, pathSurface);
-                    //Draw control border 
                     if(borderSize>=1)
                         pevent.Graphics.DrawPath(penBorder, pathBorder);
                 }
             }
-            else//Normal Button
+            else//buton normal
             {
                 this.Region = new Region(rectSurface);
                 if (borderSize >= 1)
@@ -80,18 +78,5 @@ namespace ImageToTextApp.Design
                 
 
         }
-
-        //protected override void OnHandleCreated(EventArgs e)
-        //{
-        //    base.OnHandleCreated(e);
-        //    this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
-        //}
-
-        //private void Container_BackColorChanged(object sender, EventArgs e)
-        //{
-        //    if(this.DesignMode) 
-        //        this.Invalidate();
-        //}
-
     }
 }

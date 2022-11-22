@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="imgs\**" />
+    <EmbeddedResource Remove="imgs\**" />
+    <None Remove="imgs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Tesseract.Net.SDK" Version="4.5.411" />
   </ItemGroup>
 
@@ -25,10 +31,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="imgs\" />
   </ItemGroup>
 
 </Project>
