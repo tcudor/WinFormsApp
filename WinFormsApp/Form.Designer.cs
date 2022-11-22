@@ -124,7 +124,7 @@
             this.menu_Button_new.Name = "menu_Button_new";
             this.menu_Button_new.Size = new System.Drawing.Size(188, 50);
             this.menu_Button_new.TabIndex = 11;
-            this.menu_Button_new.Text = "Alege o alta imagine";
+            this.menu_Button_new.Text = "Alegeti o alta imagine";
             this.menu_Button_new.UseVisualStyleBackColor = false;
             this.menu_Button_new.Click += new System.EventHandler(this.menu_Button_alege_Click);
             // 
